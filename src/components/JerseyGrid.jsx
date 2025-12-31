@@ -74,7 +74,9 @@ export default function JerseyGrid({
             jerseys.map(j => (
               <div
                 key={j.id}
-                className="card selectable"
+                className={`card selectable ${
+                  selection.jersey?.id === j.id ? "active-card" : ""
+                }`}
                 onClick={() =>
                   setSelection(prev => ({ ...prev, jersey: j }))
                 }
