@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  font-family: system-ui;
+  background: #020617;
+  color: white;
+}
+
+.nav {
+  padding: 1.5rem 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.catalog {
+  padding: 3rem 2rem;
+}
+
+.catalog-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tabs button,
+.size-toggle button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid #1e293b;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.tabs .active,
+.size-toggle .active {
+  background: #22c55e;
+  color: #020617;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid #1e293b;
+  padding: 1.5rem;
+  border-radius: 14px;
+}
+
+.card.selectable {
+  cursor: pointer;
+  transition: transform 0.25s;
+}
+
+.card.selectable:hover {
+  transform: translateY(-4px);
+}
+
+.card.clear {
+  border-style: dashed;
+  opacity: 0.7;
+}
+
+.active-card {
+  border-color: #22c55e;
+}
+
+.calculator {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+}
+
+.total {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #22c55e;
+}
+.materials-wrapper {
+  display: block;
+}
+
+.material-title {
+  margin: 2rem 0 1rem;
+  font-size: 1.2rem;
+  color: #94a3b8;
+  letter-spacing: 0.04em;
+}
+
+.material-title.premium {
+  margin-top: 3rem;
+}
+
+.urgent-section {
+  margin-top: 1.5rem;
+}
+
+.urgent-section h4 {
+  margin-bottom: 0.5rem;
+  color: #94a3b8;
+}
+
+.urgent-options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.urgent-options button {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #1e293b;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.urgent-options .active {
+  background: #f97316;
+  color: #020617;
+  border-color: #f97316;
+}
+.footer {
+  margin-top: 4rem;
+  padding: 3rem 2rem;
+  border-top: 1px solid #1e293b;
+  background: #020617;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer-brand h3 {
+  margin: 0;
+}
+
+.footer-brand p {
+  color: #94a3b8;
+  margin-top: 0.3rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #22c55e;
+}
+
+.footer-meta {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-meta {
+    text-align: center;
+  }
+}
+
+.hero {
+  position: relative;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Background image from Unsplash */
+.hero-bg {
+  background-image: url("https://cdn.shopify.com/s/files/1/0119/9772/files/jersey-genius_customer-photo_1_large.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark overlay for readability */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h2 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
